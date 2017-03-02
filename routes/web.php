@@ -14,12 +14,22 @@
 Route::get('/', function () {
     return view('welcome');
 });
+//
+// Route::get('/profile', function () {
+//   $data['users'] = \App\User::all();
+//   return view('/allusers/profile/', $data);
+// });
+//
+// Route::get('/allusers', function () {
+//   $data['users'] = \App\User::all();
+//   return view('allusers', $data);
+// });
+//
 
-Route::get('/allusers', function () {
-  $data['users'] = \App\User::all();
-  return view('allusers', $data);
-});
 
+
+Route::get('/users', 'UsersController@index');
+Route::get('/users/{id}', 'UsersController@singleuser');
 
 Auth::routes();
 
