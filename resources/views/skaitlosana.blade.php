@@ -20,6 +20,8 @@
       {{ $strlen }}
     <h2>Izdara lai burti ir mazi</h2>
       {{ $name }}
+    <h2>Samaina vietam</h2>
+      {{ json_encode ($pretejais) }}
   </head>
   <body>
 
