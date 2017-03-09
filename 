@@ -1,0 +1,61 @@
+[1mdiff --git a/public/index.php b/public/index.php[m
+[1mindex 716731f..7e0c829 100644[m
+[1m--- a/public/index.php[m
+[1m+++ b/public/index.php[m
+[36m@@ -19,7 +19,7 @@[m
+ |[m
+ */[m
+ [m
+[31m-require __DIR__.'/../bootstrap/autoload.php';[m
+[32m+[m[32m// require __DIR__.'/../bootstrap/autoload.php';[m
+ [m
+ /*[m
+ |--------------------------------------------------------------------------[m
+[36m@@ -32,8 +32,25 @@[m [mrequire __DIR__.'/../bootstrap/autoload.php';[m
+ | the responses back to the browser and delight our users.[m
+ |[m
+ */[m
+[32m+[m[32mfunction ekko ($fname) {[m
+[32m+[m[32m  echo ("<pre>");[m
+[32m+[m[32m    print_r ($fname);[m
+ [m
+[31m-$app = require_once __DIR__.'/../bootstrap/app.php';[m
+[32m+[m[32m  echo ("</pre>");[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mekko (["Saraksts,[Saraksts2,Saraksts2,Saraksts2,Saraksts2,]Saraksts,Saraksts,Saraksts,Saraksts,Saraksts,Saraksts"]);[m
+[32m+[m[32mekko ("janka!");[m
+[32m+[m
+[32m+[m[32mfunction square ($number) {[m
+[32m+[m[32m  return $number*(2) ;[m
+[32m+[m[32m  print_r ($number)*2;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32msquare (5.2);[m
+[32m+[m
+[32m+[m[32m// $app = require_once __DIR__.'/../bootstrap/app.php';[m
+ [m
+ /*[m
+ |--------------------------------------------------------------------------[m
+[36m@@ -47,12 +64,12 @@[m [m$app = require_once __DIR__.'/../bootstrap/app.php';[m
+ |[m
+ */[m
+ [m
+[31m-$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);[m
+[32m+[m[32m// $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);[m
+ [m
+[31m-$response = $kernel->handle([m
+[31m-    $request = Illuminate\Http\Request::capture()[m
+[31m-);[m
+[32m+[m[32m// $response = $kernel->handle([m
+[32m+[m[32m    // $request = Illuminate\Http\Request::capture()[m
+[32m+[m[32m// );[m
+ [m
+[31m-$response->send();[m
+[32m+[m[32m// $response->send();[m
+ [m
+[31m-$kernel->terminate($request, $response);[m
+[32m+[m[32m// $kernel->terminate($request, $response);[m
+warning: LF will be replaced by CRLF in public/index.php.
+The file will have its original line endings in your working directory.

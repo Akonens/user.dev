@@ -30,6 +30,7 @@ Route::get('/', function () {
 
 Route::get('/users', 'UsersController@index');
 Route::get('/users/{id}', 'UsersController@singleuser');
+Route::get('/numbers', 'NumbersController@index');
 
 Auth::routes();
 
