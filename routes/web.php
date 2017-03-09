@@ -31,6 +31,7 @@ Route::get('/', function () {
 Route::get('/users', 'UsersController@index');
 Route::get('/users/{id}', 'UsersController@singleuser');
 Route::get('/numbers', 'NumbersController@index');
+Route::get('/skaitlosana', 'SkaitlosanaController@index');
 
 Auth::routes();
 

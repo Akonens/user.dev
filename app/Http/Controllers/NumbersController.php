@@ -2,16 +2,15 @@
 
   namespace App\Http\Controllers;
 
-  use Illuminate\Http\Request;
 
-  use App\Http\Controllers\Controller;
 
-  class NumbersController{
+  class NumbersController
+  {
 
       public function index (){
         $data = [
-          'first_name' => 'Silvestrs'
-
+          'first_name' => 'Silvestrs',
+          'last_name' => 'Jakubaitis',
         ];
         return view('numbers.index',$data);
       }
